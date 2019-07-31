@@ -4,7 +4,7 @@
 #
 Name     : mvn-okhttp
 Version  : 2.4.0
-Release  : 3
+Release  : 4
 URL      : https://github.com/square/okhttp/archive/parent-2.4.0.tar.gz
 Source0  : https://github.com/square/okhttp/archive/parent-2.4.0.tar.gz
 Source1  : https://repo.maven.apache.org/maven2/com/squareup/okhttp/parent/2.7.5/parent-2.7.5.pom
