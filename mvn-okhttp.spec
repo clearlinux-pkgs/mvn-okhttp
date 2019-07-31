@@ -4,19 +4,28 @@
 #
 Name     : mvn-okhttp
 Version  : 2.4.0
-Release  : 2
+Release  : 3
 URL      : https://github.com/square/okhttp/archive/parent-2.4.0.tar.gz
 Source0  : https://github.com/square/okhttp/archive/parent-2.4.0.tar.gz
 Source1  : https://repo.maven.apache.org/maven2/com/squareup/okhttp/parent/2.7.5/parent-2.7.5.pom
 Source2  : https://repo.maven.apache.org/maven2/com/squareup/okhttp3/logging-interceptor/3.8.1/logging-interceptor-3.8.1.jar
 Source3  : https://repo.maven.apache.org/maven2/com/squareup/okhttp3/logging-interceptor/3.8.1/logging-interceptor-3.8.1.pom
 Source4  : https://repo.maven.apache.org/maven2/com/squareup/okhttp3/parent/3.8.1/parent-3.8.1.pom
-Source5  : https://repo1.maven.org/maven2/com/squareup/okhttp/okhttp/2.4.0/okhttp-2.4.0.jar
-Source6  : https://repo1.maven.org/maven2/com/squareup/okhttp/okhttp/2.4.0/okhttp-2.4.0.pom
-Source7  : https://repo1.maven.org/maven2/com/squareup/okhttp/okhttp/2.7.5/okhttp-2.7.5.jar
-Source8  : https://repo1.maven.org/maven2/com/squareup/okhttp/okhttp/2.7.5/okhttp-2.7.5.pom
-Source9  : https://repo1.maven.org/maven2/com/squareup/okhttp3/okhttp/3.8.1/okhttp-3.8.1.jar
-Source10  : https://repo1.maven.org/maven2/com/squareup/okhttp3/okhttp/3.8.1/okhttp-3.8.1.pom
+Source5  : https://repo1.maven.org/maven2/com/squareup/okhttp/mockwebserver/2.7.5/mockwebserver-2.7.5.jar
+Source6  : https://repo1.maven.org/maven2/com/squareup/okhttp/mockwebserver/2.7.5/mockwebserver-2.7.5.pom
+Source7  : https://repo1.maven.org/maven2/com/squareup/okhttp/okhttp-ws/2.7.5/okhttp-ws-2.7.5.jar
+Source8  : https://repo1.maven.org/maven2/com/squareup/okhttp/okhttp-ws/2.7.5/okhttp-ws-2.7.5.pom
+Source9  : https://repo1.maven.org/maven2/com/squareup/okhttp/okhttp/2.4.0/okhttp-2.4.0.jar
+Source10  : https://repo1.maven.org/maven2/com/squareup/okhttp/okhttp/2.4.0/okhttp-2.4.0.pom
+Source11  : https://repo1.maven.org/maven2/com/squareup/okhttp/okhttp/2.7.5/okhttp-2.7.5.jar
+Source12  : https://repo1.maven.org/maven2/com/squareup/okhttp/okhttp/2.7.5/okhttp-2.7.5.pom
+Source13  : https://repo1.maven.org/maven2/com/squareup/okhttp3/mockwebserver/3.7.0/mockwebserver-3.7.0.jar
+Source14  : https://repo1.maven.org/maven2/com/squareup/okhttp3/mockwebserver/3.7.0/mockwebserver-3.7.0.pom
+Source15  : https://repo1.maven.org/maven2/com/squareup/okhttp3/okhttp/3.7.0/okhttp-3.7.0.jar
+Source16  : https://repo1.maven.org/maven2/com/squareup/okhttp3/okhttp/3.7.0/okhttp-3.7.0.pom
+Source17  : https://repo1.maven.org/maven2/com/squareup/okhttp3/okhttp/3.8.1/okhttp-3.8.1.jar
+Source18  : https://repo1.maven.org/maven2/com/squareup/okhttp3/okhttp/3.8.1/okhttp-3.8.1.pom
+Source19  : https://repo1.maven.org/maven2/com/squareup/okhttp3/parent/3.7.0/parent-3.7.0.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0
@@ -52,23 +61,50 @@ cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/com/squareup/okhttp3/lo
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/squareup/okhttp3/parent/3.8.1
 cp %{SOURCE4} %{buildroot}/usr/share/java/.m2/repository/com/squareup/okhttp3/parent/3.8.1/parent-3.8.1.pom
 
-mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/squareup/okhttp/okhttp/2.4.0
-cp %{SOURCE5} %{buildroot}/usr/share/java/.m2/repository/com/squareup/okhttp/okhttp/2.4.0/okhttp-2.4.0.jar
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/squareup/okhttp/mockwebserver/2.7.5
+cp %{SOURCE5} %{buildroot}/usr/share/java/.m2/repository/com/squareup/okhttp/mockwebserver/2.7.5/mockwebserver-2.7.5.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/squareup/okhttp/mockwebserver/2.7.5
+cp %{SOURCE6} %{buildroot}/usr/share/java/.m2/repository/com/squareup/okhttp/mockwebserver/2.7.5/mockwebserver-2.7.5.pom
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/squareup/okhttp/okhttp-ws/2.7.5
+cp %{SOURCE7} %{buildroot}/usr/share/java/.m2/repository/com/squareup/okhttp/okhttp-ws/2.7.5/okhttp-ws-2.7.5.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/squareup/okhttp/okhttp-ws/2.7.5
+cp %{SOURCE8} %{buildroot}/usr/share/java/.m2/repository/com/squareup/okhttp/okhttp-ws/2.7.5/okhttp-ws-2.7.5.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/squareup/okhttp/okhttp/2.4.0
-cp %{SOURCE6} %{buildroot}/usr/share/java/.m2/repository/com/squareup/okhttp/okhttp/2.4.0/okhttp-2.4.0.pom
+cp %{SOURCE9} %{buildroot}/usr/share/java/.m2/repository/com/squareup/okhttp/okhttp/2.4.0/okhttp-2.4.0.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/squareup/okhttp/okhttp/2.4.0
+cp %{SOURCE10} %{buildroot}/usr/share/java/.m2/repository/com/squareup/okhttp/okhttp/2.4.0/okhttp-2.4.0.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/squareup/okhttp/okhttp/2.7.5
-cp %{SOURCE7} %{buildroot}/usr/share/java/.m2/repository/com/squareup/okhttp/okhttp/2.7.5/okhttp-2.7.5.jar
+cp %{SOURCE11} %{buildroot}/usr/share/java/.m2/repository/com/squareup/okhttp/okhttp/2.7.5/okhttp-2.7.5.jar
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/squareup/okhttp/okhttp/2.7.5
-cp %{SOURCE8} %{buildroot}/usr/share/java/.m2/repository/com/squareup/okhttp/okhttp/2.7.5/okhttp-2.7.5.pom
+cp %{SOURCE12} %{buildroot}/usr/share/java/.m2/repository/com/squareup/okhttp/okhttp/2.7.5/okhttp-2.7.5.pom
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/squareup/okhttp3/mockwebserver/3.7.0
+cp %{SOURCE13} %{buildroot}/usr/share/java/.m2/repository/com/squareup/okhttp3/mockwebserver/3.7.0/mockwebserver-3.7.0.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/squareup/okhttp3/mockwebserver/3.7.0
+cp %{SOURCE14} %{buildroot}/usr/share/java/.m2/repository/com/squareup/okhttp3/mockwebserver/3.7.0/mockwebserver-3.7.0.pom
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/squareup/okhttp3/okhttp/3.7.0
+cp %{SOURCE15} %{buildroot}/usr/share/java/.m2/repository/com/squareup/okhttp3/okhttp/3.7.0/okhttp-3.7.0.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/squareup/okhttp3/okhttp/3.7.0
+cp %{SOURCE16} %{buildroot}/usr/share/java/.m2/repository/com/squareup/okhttp3/okhttp/3.7.0/okhttp-3.7.0.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/squareup/okhttp3/okhttp/3.8.1
-cp %{SOURCE9} %{buildroot}/usr/share/java/.m2/repository/com/squareup/okhttp3/okhttp/3.8.1/okhttp-3.8.1.jar
+cp %{SOURCE17} %{buildroot}/usr/share/java/.m2/repository/com/squareup/okhttp3/okhttp/3.8.1/okhttp-3.8.1.jar
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/squareup/okhttp3/okhttp/3.8.1
-cp %{SOURCE10} %{buildroot}/usr/share/java/.m2/repository/com/squareup/okhttp3/okhttp/3.8.1/okhttp-3.8.1.pom
+cp %{SOURCE18} %{buildroot}/usr/share/java/.m2/repository/com/squareup/okhttp3/okhttp/3.8.1/okhttp-3.8.1.pom
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/squareup/okhttp3/parent/3.7.0
+cp %{SOURCE19} %{buildroot}/usr/share/java/.m2/repository/com/squareup/okhttp3/parent/3.7.0/parent-3.7.0.pom
 
 
 %files
@@ -76,6 +112,10 @@ cp %{SOURCE10} %{buildroot}/usr/share/java/.m2/repository/com/squareup/okhttp3/o
 
 %files data
 %defattr(-,root,root,-)
+/usr/share/java/.m2/repository/com/squareup/okhttp/mockwebserver/2.7.5/mockwebserver-2.7.5.jar
+/usr/share/java/.m2/repository/com/squareup/okhttp/mockwebserver/2.7.5/mockwebserver-2.7.5.pom
+/usr/share/java/.m2/repository/com/squareup/okhttp/okhttp-ws/2.7.5/okhttp-ws-2.7.5.jar
+/usr/share/java/.m2/repository/com/squareup/okhttp/okhttp-ws/2.7.5/okhttp-ws-2.7.5.pom
 /usr/share/java/.m2/repository/com/squareup/okhttp/okhttp/2.4.0/okhttp-2.4.0.jar
 /usr/share/java/.m2/repository/com/squareup/okhttp/okhttp/2.4.0/okhttp-2.4.0.pom
 /usr/share/java/.m2/repository/com/squareup/okhttp/okhttp/2.7.5/okhttp-2.7.5.jar
@@ -83,6 +123,11 @@ cp %{SOURCE10} %{buildroot}/usr/share/java/.m2/repository/com/squareup/okhttp3/o
 /usr/share/java/.m2/repository/com/squareup/okhttp/parent/2.7.5/parent-2.7.5.pom
 /usr/share/java/.m2/repository/com/squareup/okhttp3/logging-interceptor/3.8.1/logging-interceptor-3.8.1.jar
 /usr/share/java/.m2/repository/com/squareup/okhttp3/logging-interceptor/3.8.1/logging-interceptor-3.8.1.pom
+/usr/share/java/.m2/repository/com/squareup/okhttp3/mockwebserver/3.7.0/mockwebserver-3.7.0.jar
+/usr/share/java/.m2/repository/com/squareup/okhttp3/mockwebserver/3.7.0/mockwebserver-3.7.0.pom
+/usr/share/java/.m2/repository/com/squareup/okhttp3/okhttp/3.7.0/okhttp-3.7.0.jar
+/usr/share/java/.m2/repository/com/squareup/okhttp3/okhttp/3.7.0/okhttp-3.7.0.pom
 /usr/share/java/.m2/repository/com/squareup/okhttp3/okhttp/3.8.1/okhttp-3.8.1.jar
 /usr/share/java/.m2/repository/com/squareup/okhttp3/okhttp/3.8.1/okhttp-3.8.1.pom
+/usr/share/java/.m2/repository/com/squareup/okhttp3/parent/3.7.0/parent-3.7.0.pom
 /usr/share/java/.m2/repository/com/squareup/okhttp3/parent/3.8.1/parent-3.8.1.pom
